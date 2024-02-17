@@ -18,8 +18,12 @@ for i in range(1, 47):
         j += 1
         df = df.replace('\n', '', regex=True).replace('\r', '', regex=True).replace('\r\n', '', regex=True).replace('\n\r', '', regex=True)
         print(df)
+        if j == 1:
+            df_header = df.iloc[:2]
+            print(df_header)
         df.to_csv(f"./files/{j}.csv", index=None)
     integrate("./files", f"./output_files/output{i}.csv")
     shutil.rmtree("./files")
     os.mkdir("./files")
+
 shutil.rmtree("./files")
