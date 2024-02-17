@@ -49,7 +49,7 @@ $ python main.py
 または
 
 ```
-pip install tabula-py pandas
+$ pip install tabula-py pandas
 
 $ python main.py
 ```
