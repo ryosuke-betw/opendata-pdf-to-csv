@@ -18,4 +18,3 @@ for df in dfs:
 integrate("./files", "output_files")
 
 shutil.rmtree("./files")
-os.mkdir("./files")
