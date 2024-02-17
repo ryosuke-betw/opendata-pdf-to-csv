@@ -17,10 +17,9 @@ Github Actionによって1日に一回PDFを全件取得し、PDF -> CSVに変�
 
 [https://github.com/c-3lab/dim?tab=readme-ov-file#install-the-dim](https://github.com/c-3lab/dim?tab=readme-ov-file#install-the-dim)
 
-2. プロジェクト用ディレクトリを作成
+2. プロジェクトをclone
 ```
-$ mkdir project
-$ cd project
+$ git clone https://github.com/c-3lab/opendata-pdf-to-csv.git
 ```
 
 3. プロジェクト初期化
