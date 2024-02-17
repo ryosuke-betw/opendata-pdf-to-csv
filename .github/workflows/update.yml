@@ -41,7 +41,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git status
-        git add -f ./data_files
+        git add -f ./data_files dim.json dim-lock.json
         git add -f ./output_files
         git commit -m "Update data" || echo "Nothing to commit"
     - name: Push changes
