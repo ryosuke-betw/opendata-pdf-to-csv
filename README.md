@@ -37,9 +37,19 @@ $ dim install -P https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000186912_000
 
 5. pdfからcsvへ変換
 
+※ poetryのインストール方法： https://cocoatomo.github.io/poetry-ja/
+
 ```
 $ poetry shell
 $ poetry install
+
+$ python main.py
+```
+
+または
+
+```
+pip install tabula-py pandas
 
 $ python main.py
 ```
