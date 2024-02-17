@@ -1,11 +1,17 @@
 # opendata-pdf-to-csv
 
-## pdfの一括ダウンロード
-
-### 対象ページ
+#### 対象ページ
 
 緊急避妊に係る取組について - 厚生労働省のウェブサイトに掲載を希望した緊急避妊にかかる対面診療が可能な産婦人科医療機関等の一覧
 https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000186912_00002.html
+
+
+Github Actionによって1日に一回PDFを全件取得し、PDF -> CSVに変換します。
+
+結果は[./output_files](./output_files)に出力されます。
+
+
+## 手動で実行
 
 1. dimのインストール
 
@@ -30,6 +36,11 @@ $ dim install -P https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000186912_000
 
 `./data_files`以下にダウンロードされたpdfが保存される
 
+5. pdfからcsvへ変換
 
-## pdfからcsvへ変換
+```
+$ poetry shell
+$ poetry install
 
+$ python main.py
+```
