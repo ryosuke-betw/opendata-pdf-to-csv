@@ -3,6 +3,7 @@ import tabula
 from action import integrate
 import os
 import shutil
+from prefecture import prefectures
 
 if not os.path.exists("./files"):
     os.mkdir("./files")
@@ -22,7 +23,7 @@ for i in range(1, 47):
             df_header = df.iloc[:2]
             print(df_header)
         df.to_csv(f"./files/{j}.csv", index=None)
-    integrate("./files", f"./output_files/output{i}.csv")
+    integrate("./files", f"./output_files/output_{prefectures[i-1]}.csv")
     shutil.rmtree("./files")
     os.mkdir("./files")
 
