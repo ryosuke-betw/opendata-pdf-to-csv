@@ -1,4 +1,4 @@
-prefectures = [
+PREFECTURES = [
     "北海道",
     "青森県",
     "岩手県",
@@ -47,3 +47,4 @@ prefectures = [
     "鹿児島県",
     "沖縄県",
     ]
+
