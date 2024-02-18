@@ -637,6 +637,21 @@
       "integrity": "84d3326233f1da0386618dba8bb7da101403c6d0",
       "postProcesses": [],
       "headers": {}
+    },
+    {
+      "name": "ken_all",
+      "url": "https://www.post.japanpost.jp/zipcode/dl/utf/zip/utf_ken_all.zip",
+      "path": "./data_files/ken_all/utf_ken_all.zip",
+      "catalogUrl": null,
+      "catalogResourceId": null,
+      "lastModified": "2024-01-31T07:50:20.000Z",
+      "eTag": null,
+      "lastDownloaded": "2024-02-18T10:24:16.659Z",
+      "integrity": "5fb0d5f96071c3648b42c7407c4ca71b7c7f1b23",
+      "postProcesses": [
+        "unzip"
+      ],
+      "headers": {}
     }
   ]
 }

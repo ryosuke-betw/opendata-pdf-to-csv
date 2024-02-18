@@ -392,6 +392,16 @@
       "catalogResourceId": null,
       "postProcesses": [],
       "headers": {}
+    },
+    {
+      "url": "https://www.post.japanpost.jp/zipcode/dl/utf/zip/utf_ken_all.zip",
+      "name": "ken_all",
+      "catalogUrl": null,
+      "catalogResourceId": null,
+      "postProcesses": [
+        "unzip"
+      ],
+      "headers": {}
     }
   ]
 }

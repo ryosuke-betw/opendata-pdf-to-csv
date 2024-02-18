@@ -26,8 +26,10 @@ jobs:
       run: chmod u+x /usr/local/bin/dim
     - name: Init dim project
       run: dim init
-    - name: Install data
+    - name: Install shinryoujo data
       run: dim install -P https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000186912_00002.html -e ".pdf" -n "shinryoujo"
+    - name: Install ken all
+      run: dim install https://www.post.japanpost.jp/zipcode/dl/utf/zip/utf_ken_all.zip -p unzip -n "ken_all"
     - name: Setup Python
       uses: actions/setup-python@v1
       with:
