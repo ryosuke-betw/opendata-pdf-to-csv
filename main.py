@@ -24,8 +24,8 @@ def fix_format_page_df(df, line_number):
 if not os.path.exists("./output_files"):
     os.mkdir("./output_files")
 
-for i in range(1, 48):
-    print("PREFECTURE_NUMBER", i, PREFECTURES[i-1])
+for i, prefecture in enumerate(PREFECTURES, 1):
+    print("PREFECTURE_NUMBER", i, prefecture)
     opendata_file = os.listdir(f"./data_files/shinryoujo_{i}")
     dfs = tabula.read_pdf(f"./data_files/shinryoujo_{i}/{opendata_file[0]}", lattice=True, pages='all', pandas_options={'header': None})
     # 1ページ目のみ「基本情報」行の削除のため1行指定
@@ -41,4 +41,4 @@ for i in range(1, 48):
     result_df = df.dropna(thresh=2).dropna(subset=[df.index[0]], axis=1)
 
     prefecture_number = str(i).zfill(2)
-    result_df.to_csv(f"./output_files/{prefecture_number}_{PREFECTURES[i-1]}.csv", header=False, index=False)
+    result_df.to_csv(f"./output_files/{prefecture_number}_{prefecture}.csv", header=False, index=False)
