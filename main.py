@@ -35,8 +35,11 @@ for i, prefecture in enumerate(PREFECTURES, 1):
     dfs.insert(0, first_df)
     # ページごとのデータを結合
     df = pd.concat(dfs)
-    # 改行コードを削除
-    df = df.replace('\n', '', regex=True).replace('\r', '', regex=True).replace('\r\n', '', regex=True).replace('\n\r', '', regex=True)
+    # 自由記述欄以外の改行コードを削除
+    skip_columns = ['医療機関における緊急避妊にかかる対面診療への対応可能時間帯']
+    for column in df.columns:
+        if column not in skip_columns:
+            df[column] = df[column].replace('\n', '', regex=True).replace('\r', '', regex=True).replace('\r\n', '', regex=True).replace('\n\r', '', regex=True)
     # データが2つ未満の行は不要な可能性が高いので行を削除 & 列名に欠損値がある場合も列ごと削除
     result_df = df.dropna(thresh=2).dropna(subset=[df.index[0]], axis=1)
 
